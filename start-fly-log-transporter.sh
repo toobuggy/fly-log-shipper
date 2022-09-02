@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+[[ ! -z "$AXIOM_TOKEN" ]] && cat /etc/vector/axiom.toml >> /etc/vector/vector.toml
 [[ ! -z "$DATADOG_API_KEY" ]] && cat /etc/vector/datadog.toml >> /etc/vector/vector.toml
 if [ ! -z "$AWS_ACCESS_KEY_ID" ] && [ ! -z "$AWS_BUCKET" ]; then
   cat /etc/vector/aws_s3.toml >> /etc/vector/vector.toml 

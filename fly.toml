@@ -1,5 +1,7 @@
-app = "fly-log-shipper-example"
+# fly.toml file generated for exec-log-shipper on 2022-09-02T16:16:25-04:00
+
+app = "exec-log-shipper"
 
 [metrics]
-  port = 9598
   path = "/metrics"
+  port = 9598
